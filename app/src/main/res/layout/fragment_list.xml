@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="mSharedViewModel"
+            type="com.pankajjangid.todoapp.fragments.SharedViewModel" />
 
     </data>
 
@@ -44,6 +47,7 @@
             android:layout_width="100dp"
             android:layout_height="120dp"
 
+            android:emptyDatabase="@{mSharedViewModel.emptyDatabase}"
             android:scaleType="fitXY"
             android:src="@drawable/ic_terrain"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -57,6 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:emptyDatabase="@{mSharedViewModel.emptyDatabase}"
 
             android:text="@string/no_data"
             android:textColor="@color/dark_grey"
